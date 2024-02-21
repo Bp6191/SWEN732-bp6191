@@ -1,6 +1,7 @@
 public class ReportGeneratorVisitor implements UniversityVisitor {
     @Override
     public void visit(Student student) {
+        //Generating report for a student
         System.out.println("Generating report for student: " + student.getName());
 
         System.out.println("Student Report:");
@@ -12,9 +13,10 @@ public class ReportGeneratorVisitor implements UniversityVisitor {
 
     @Override
     public void visit(Professor professor) {
+        //Generating report for a professor
         System.out.println("Calculating workload for professor: " + professor.getName());
 
-
+// Calculating workload for professor
         int numberOfCourses = 5;
         int workload = numberOfCourses * 10;
         System.out.println("Workload for " + professor.getName() + ": " + workload + " hours");
@@ -23,6 +25,7 @@ public class ReportGeneratorVisitor implements UniversityVisitor {
 
     @Override
     public void visit(Course course) {
+        // Showing output of course details
         System.out.println("Displaying details for course: " + course.getCourseCode());
 
         System.out.println("Course Details:");

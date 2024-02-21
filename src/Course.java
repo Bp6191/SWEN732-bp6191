@@ -10,6 +10,7 @@ public class Course implements UniversityEntity {
     }
 
     @Override
+    //Can call appropriate visit methods for students
     public void accept(UniversityVisitor visitor) {
         visitor.visit(this);
     }
